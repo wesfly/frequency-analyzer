@@ -11,10 +11,15 @@ counter_list = []
 for i in range(0, len(alphabet)):
     count = string.count(alphabet[i])
     counter_list.extend([count])
-    #print(alphabet[i], count)
 
-print("Total length:", len(string))
+print("Length of string:", len(string))
 full_list = dict(zip(alphabet, counter_list))
-# print(alphabet)
-# print(counter_list)
+
 print(full_list)
+word_length_counter = 0
+words = string.split(" ")
+for i in range(0 ,len(words)):
+    word_length_counter += len(words[i])
+
+average_word_length = word_length_counter / len(words)
+print("Average word length", average_word_length)

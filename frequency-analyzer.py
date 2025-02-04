@@ -15,7 +15,6 @@ for i in range(0, len(alphabet)):
 
 full_list = dict(zip(alphabet, counter_list))
 
-
 word_length_counter = 0
 words = string.split(" ")
 

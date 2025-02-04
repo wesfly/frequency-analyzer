@@ -20,6 +20,15 @@ for i in range(0 ,len(words)):
 
 average_word_length = word_length_counter / len(words)
 
-print("Length of string:", len(string))
 print(full_list)
+
+# visualisation
+for i in range(0, len(alphabet)):
+    amount = full_list.get(alphabet[i])
+    print(alphabet[i], end="")
+    for i in range(0, amount):
+        print("#", end="")
+    print()
+
+print("Length of string:", len(string))
 print("Average word length", average_word_length)

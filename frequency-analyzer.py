@@ -14,18 +14,24 @@ for i in range(0, len(alphabet)):
 
 full_list = dict(zip(alphabet, counter_list))
 
+
 # average word length calculator
 for i in range(0 ,len(words)):
     word_length_counter += len(words[i])
 
 average_word_length = word_length_counter / len(words)
 
+
 print(full_list)
 
 # visualisation
 for i in range(0, len(alphabet)):
     amount = full_list.get(alphabet[i])
-    print(alphabet[i], end="")
+    if alphabet[i] == " ":
+        print("_", end=" ")
+    else:
+        print(alphabet[i], end=" ")
+    
     for i in range(0, amount):
         print("#", end="")
     print()

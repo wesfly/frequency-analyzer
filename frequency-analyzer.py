@@ -1,11 +1,11 @@
-print("This program analyzes the frequency of characters in a text.")
 string = input("Put your string here: ").lower()
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' , ' ']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' , ' ', '!', "?"]
 
 counter_list = []
 word_length_counter = 0
 words = string.split(" ")
+sentences = string.split(".")
 
 # character counter
 for i in range(0, len(alphabet)):
@@ -21,9 +21,6 @@ for i in range(0 ,len(words)):
 
 average_word_length = word_length_counter / len(words)
 
-
-print(full_list)
-
 # visualisation
 for i in range(0, len(alphabet)):
     amount = full_list.get(alphabet[i])
@@ -37,4 +34,6 @@ for i in range(0, len(alphabet)):
     print()
 
 print("Length of string:", len(string))
+print("Words:", len(words))
+print("Sentences:", len(sentences))
 print("Average word length", average_word_length)

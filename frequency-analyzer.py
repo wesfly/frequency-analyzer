@@ -1,5 +1,6 @@
 string = input("Put your string here: ").lower()
 
+# all characters that will be detected
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' , ' ', '!', "?"]
 
 counter_list = []
@@ -8,13 +9,13 @@ sentence_length_counter = 0
 words = string.split(" ")
 sentences = string.split(".")
 
-# character counter, gives a raw list of character frequency
+# character counter, writes a raw list of character frequency
 for i in range(0, len(alphabet)):
     individual_character_count = string.count(alphabet[i])
     counter_list.extend([individual_character_count])
 
 # zip alphabet and raw list to make a dictionary
-full_list = dict(zip(alphabet, counter_list))
+full_dict = dict(zip(alphabet, counter_list))
 
 
 # average word length calculator
@@ -31,13 +32,13 @@ average_sentence_length = sentence_length_counter / len(sentences)
 
 # visualisation
 for i in range(0, len(alphabet)):
-    amount = full_list.get(alphabet[i])
+    value = full_dict.get(alphabet[i])
     if alphabet[i] == " ":
         print("_", end=" ")
     else:
         print(alphabet[i], end=" ")
     
-    for i in range(0, amount):
+    for i in range(0, value):
         print("#", end="")
     print()
 

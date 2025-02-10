@@ -10,6 +10,7 @@ word_length_counter = 0
 sentence_length_counter = 0
 words = string.split(" ")
 sentences = string.split(".")
+words_per_sentence_counter = 0
 
 
 # character counter, writes a raw list of character frequency
@@ -35,6 +36,13 @@ for i in range(0 ,len(sentences)):
 average_sentence_length = sentence_length_counter / len(sentences)
 
 
+for i in range(0, len(sentences)):
+    sentence_word_count = len(sentences[i].split(" "))
+    words_per_sentence_counter += sentence_word_count
+
+average_words_per_sentence = words_per_sentence_counter/len(sentences)
+
+
 # visualisation chart
 for i in range(0, len(alphabet)):
     value = full_dict.get(alphabet[i])
@@ -53,3 +61,4 @@ print("Words:", len(words))
 print("Average word length", average_word_length)
 print("Sentences:", len(sentences))
 print("Average sentence length:", average_sentence_length)
+print("Average words per sentence:", average_words_per_sentence)

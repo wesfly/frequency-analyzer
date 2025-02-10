@@ -1,6 +1,6 @@
 # Frequency Analyzer
 
-### How to install
+### How to run
 
 ```bash
 git clone https://github.com/wesfly/frequency-analyzer

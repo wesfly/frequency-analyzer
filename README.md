@@ -16,7 +16,8 @@ This Python script counts the frequency of each letter in a given string and dis
 1. **Input**: The user is prompted to enter a string of text.
 2. **Alphabet Initialization**: A list containing all lowercase English letters (a-z) is defined.
 3. **Counting Occurrences**: For each letter in the alphabet, the script counts how many times it appears in the input string and stores these counts in a list.
-4. **Results Display**: The script prints the total length of the input string and converts the counts into a dictionary where keys are letters (a-z) and values are their respective counts.
+4. **Other Statistics**: The program calculates other useful statistics such as average sentence length.
+5. **Results Display**: The script prints the total length of the input string and converts the counts into a dictionary where keys are letters (a-z) and values are their respective counts.
 
 ### Features:
 - The script handles both lowercase and uppercase letters by default (though it only counts lowercase).

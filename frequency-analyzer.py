@@ -1,3 +1,4 @@
+# Initial string input, set lowercase
 string = input("Put your string here: ").lower()
 
 
@@ -36,6 +37,7 @@ for i in range(0 ,len(sentences)):
 average_sentence_length = sentence_length_counter / len(sentences)
 
 
+# Average words per sentence counter
 for i in range(0, len(sentences)):
     sentence_word_count = len(sentences[i].split(" "))
     words_per_sentence_counter += sentence_word_count
@@ -43,7 +45,7 @@ for i in range(0, len(sentences)):
 average_words_per_sentence = words_per_sentence_counter/len(sentences)
 
 
-# visualisation chart
+# Visualisation Chart
 for i in range(0, len(alphabet)):
     value = full_dict.get(alphabet[i])
     if alphabet[i] == " ":
@@ -53,7 +55,7 @@ for i in range(0, len(alphabet)):
     
     for i in range(0, value):
         print("#", end="")
-    print()
+    print() # Add an additional line at the end
 
 
 print("Length of string:", len(string))
